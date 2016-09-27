@@ -29,7 +29,7 @@ class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         tableView.dataSource = self
         
         // Generate testData
-        generateTestData()
+//        generateTestData()
         
         // Get the wordslist; will be updated later for AppDelegate to load SQlite DB on first run
         getWordList()
