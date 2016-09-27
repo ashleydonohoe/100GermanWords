@@ -21,7 +21,36 @@ class ShowWordDetail: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadWordDetails()
+    }
 
+    @IBAction func goBack(_ sender: AnyObject) {
+       dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func updateStarredStatus(_ sender: AnyObject) {
+        let currentStatus = word.starred
+        word.starred = !currentStatus
+        if word.starred == true {
+            starredIcon.setBackgroundImage(UIImage(named: "starfilled"), for: .normal)
+        } else {
+            starredIcon.setBackgroundImage(UIImage(named: "starnofill"), for: .normal)
+        }
+        
+    }
+    
+    @IBAction func markLearnedStatus(_ sender: UIButton) {
+        let currentStatus = word.learned
+        word.learned = !currentStatus
+        if word.learned == true {
+            learnedStatus.setTitle("Mark As Unlearned", for: .normal)
+        } else {
+            learnedStatus.setTitle("Mark As Learned", for: .normal)
+        }
+        
+    }
+    
+    func loadWordDetails() {
         if word != nil {
             germanWord.text = word.germanWord
             englishWord.text = word.englishWord
@@ -40,31 +69,5 @@ class ShowWordDetail: UIViewController {
                 starredIcon.setBackgroundImage(UIImage(named: "starnofill"), for: .normal)
             }
         }
-    }
-
-    @IBAction func goBack(_ sender: AnyObject) {
-       dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func updateStarredStatus(_ sender: AnyObject) {
-        let currentStatus = word.starred!
-        word.starred = !currentStatus
-        if word.starred == true {
-            starredIcon.setBackgroundImage(UIImage(named: "starfilled"), for: .normal)
-        } else {
-            starredIcon.setBackgroundImage(UIImage(named: "starnofill"), for: .normal)
-        }
-        
-    }
-    
-    @IBAction func markLearnedStatus(_ sender: UIButton) {
-        let currentStatus = word.learned!
-        word.learned = !currentStatus
-        if word.learned == true {
-            learnedStatus.setTitle("Mark As Unlearned", for: .normal)
-        } else {
-            learnedStatus.setTitle("Mark As Learned", for: .normal)
-        }
-        
     }
 }
