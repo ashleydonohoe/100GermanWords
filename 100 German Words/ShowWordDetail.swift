@@ -41,7 +41,6 @@ class ShowWordDetail: UIViewController {
     @IBAction func markLearnedStatus(_ sender: UIButton) {
         let currentStatus = word.learned!
         word.learned = !currentStatus
-        
         if word.learned == true {
             learnedStatus.setTitle("Mark As Unlearned", for: .normal)
         } else {

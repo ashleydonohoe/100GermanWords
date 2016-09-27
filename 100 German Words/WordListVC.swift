@@ -11,8 +11,8 @@ import UIKit
 class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var words = [
-    Word(germanWord: "das Haus", englishWord: "the house", germanExample: "Das Haus ist grün.", englishExample: "The house is green.", learned: false, starred: false),
-        Word(germanWord: "die Tür", englishWord: "the door", germanExample: "Die Tür ist zu.", englishExample: "The door is closed.", learned: false, starred: false)
+    Word(germanWord: "das Haus", englishWord: "the house", germanExample: "Das Haus ist grün.", englishExample: "The house is green.", learned: false, starred: true),
+        Word(germanWord: "die Tür", englishWord: "the door", germanExample: "Die Tür ist zu.", englishExample: "The door is closed.", learned: true, starred: false)
         ]
     
     @IBOutlet weak var tableView: UITableView!
