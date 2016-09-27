@@ -10,15 +10,43 @@ import UIKit
 
 class ShowWordDetail: UIViewController {
     
-    var word: Word?
+    @IBOutlet weak var learnedStatus: UIButton!
+    @IBOutlet weak var englishSentence: UILabel!
+    @IBOutlet weak var germanSentence: UILabel!
+    @IBOutlet weak var englishWord: UILabel!
+    @IBOutlet weak var germanWord: UILabel!
+    var word: Word!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         if word != nil {
-            print(word)
+            germanWord.text = word.germanWord
+            englishWord.text = word.englishWord
+            germanSentence.text = word.germanExample
+            englishSentence.text = word.englishExample
+            
+            if word.learned == true {
+                learnedStatus.setTitle("Mark As Unlearned", for: .normal)
+            } else {
+                learnedStatus.setTitle("Mark As Learned", for: .normal)
+            }
         }
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func goBack(_ sender: AnyObject) {
+       dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func markLearnedStatus(_ sender: UIButton) {
+        let currentStatus = word.learned!
+        word.learned = !currentStatus
+        
+        if word.learned == true {
+            learnedStatus.setTitle("Mark As Unlearned", for: .normal)
+        } else {
+            learnedStatus.setTitle("Mark As Learned", for: .normal)
+        }
+        
+    }
 }
