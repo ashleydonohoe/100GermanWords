@@ -62,7 +62,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZT-bj-JsF">
+                                                <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZT-bj-JsF">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="FRd-jS-VA0"/>
                                                         <constraint firstAttribute="width" constant="40" id="bbN-ZM-KMK"/>
@@ -124,7 +124,7 @@
         <!--WordDetailVC-->
         <scene sceneID="H5G-GO-cyh">
             <objects>
-                <viewController title="WordDetailVC" id="3vG-ck-5gI" sceneMemberID="viewController">
+                <viewController title="WordDetailVC" id="3vG-ck-5gI" customClass="ShowWordDetail" customModule="_00_German_Words" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ju3-4M-2RV"/>
                         <viewControllerLayoutGuide type="bottom" id="Ou1-zD-36I"/>
