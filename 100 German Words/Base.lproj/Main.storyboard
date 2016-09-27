@@ -19,36 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="chA-T8-jTH">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="96" id="zWC-FV-Y4U">
-                                        <rect key="frame" x="0.0" y="28" width="288" height="96"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zWC-FV-Y4U" id="nDE-fl-sLK">
-                                            <frame key="frameInset" width="288" height="95"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="das Haus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iv-J2-f72">
-                                                    <frame key="frameInset" minX="16" minY="37" width="209" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZT-bj-JsF">
-                                                    <frame key="frameInset" minX="240" minY="27" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <state key="normal" image="star">
-                                                        <color key="titleColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </state>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1M-EO-UOR">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 German Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yi-fX-b0u">
@@ -72,6 +42,59 @@
                                 </segments>
                                 <color key="tintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="chA-T8-jTH">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="WordCell" rowHeight="65" id="zWC-FV-Y4U" customClass="WordCell" customModule="_00_German_Words" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="288" height="65"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zWC-FV-Y4U" id="nDE-fl-sLK">
+                                            <frame key="frameInset" width="288" height="64"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="das Haus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iv-J2-f72">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="the house" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUy-ig-vMh">
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZT-bj-JsF">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="FRd-jS-VA0"/>
+                                                        <constraint firstAttribute="width" constant="40" id="bbN-ZM-KMK"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" image="starnofill">
+                                                        <color key="titleColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="bUy-ig-vMh" secondAttribute="trailing" constant="63" id="Bdo-dg-mPi"/>
+                                                <constraint firstItem="7iv-J2-f72" firstAttribute="leading" secondItem="nDE-fl-sLK" secondAttribute="leadingMargin" id="Iga-Nl-dji"/>
+                                                <constraint firstItem="bUy-ig-vMh" firstAttribute="leading" secondItem="nDE-fl-sLK" secondAttribute="leading" constant="8" id="JMU-5a-vjW"/>
+                                                <constraint firstItem="bUy-ig-vMh" firstAttribute="top" secondItem="7iv-J2-f72" secondAttribute="bottom" constant="5.5" id="LLh-ve-8Eo"/>
+                                                <constraint firstItem="7iv-J2-f72" firstAttribute="top" secondItem="nDE-fl-sLK" secondAttribute="topMargin" id="XYX-h7-5IE"/>
+                                                <constraint firstAttribute="bottom" secondItem="bUy-ig-vMh" secondAttribute="bottom" constant="3" id="aAG-l6-5E4"/>
+                                                <constraint firstItem="sZT-bj-JsF" firstAttribute="trailing" secondItem="nDE-fl-sLK" secondAttribute="trailingMargin" id="b4s-rS-drD"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="sZT-bj-JsF" secondAttribute="bottom" constant="8" id="m24-tz-YKK"/>
+                                                <constraint firstItem="bUy-ig-vMh" firstAttribute="top" secondItem="7iv-J2-f72" secondAttribute="bottom" constant="5.5" id="q2g-e1-vV4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7iv-J2-f72" secondAttribute="trailing" constant="92" id="sLN-46-1a7"/>
+                                                <constraint firstItem="sZT-bj-JsF" firstAttribute="top" secondItem="nDE-fl-sLK" secondAttribute="topMargin" id="uk0-Jf-6s4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="englishTextLabel" destination="bUy-ig-vMh" id="LQF-mB-Bmu"/>
+                                            <outlet property="germanTextLabel" destination="7iv-J2-f72" id="JWi-iu-GzN"/>
+                                            <outlet property="starredIcon" destination="sZT-bj-JsF" id="2ag-DF-jMF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -89,6 +112,9 @@
                             <constraint firstAttribute="trailing" secondItem="chA-T8-jTH" secondAttribute="trailing" constant="16" id="uYY-pE-i9H"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="chA-T8-jTH" id="Ic4-K2-ow6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,6 +122,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star" width="68" height="65"/>
+        <image name="starnofill" width="68" height="65"/>
     </resources>
 </document>
