@@ -38,6 +38,7 @@
                                 <segments>
                                     <segment title="All"/>
                                     <segment title="Learned"/>
+                                    <segment title="Unlearned"/>
                                     <segment title="Starred"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
