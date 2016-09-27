@@ -10,7 +10,7 @@ import Foundation
 
 // This is just a test model for Words before Core Data is implemented
 
-struct Word {
+struct WordM {
     let germanWord: String!
     let englishWord: String!
     let germanExample: String!

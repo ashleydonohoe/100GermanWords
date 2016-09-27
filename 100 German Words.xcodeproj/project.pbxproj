@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E01EB76E1D9B0E5800732C40 /* Word+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01EB76C1D9B0E5800732C40 /* Word+CoreDataClass.swift */; };
+		E01EB76F1D9B0E5800732C40 /* Word+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01EB76D1D9B0E5800732C40 /* Word+CoreDataProperties.swift */; };
 		E0C41C4C1D99EE26002A10E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C41C4B1D99EE26002A10E4 /* AppDelegate.swift */; };
 		E0C41C4E1D99EE26002A10E4 /* WordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C41C4D1D99EE26002A10E4 /* WordListVC.swift */; };
 		E0C41C511D99EE26002A10E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C41C4F1D99EE26002A10E4 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E01EB76C1D9B0E5800732C40 /* Word+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E01EB76D1D9B0E5800732C40 /* Word+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E0C41C481D99EE26002A10E4 /* 100 German Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "100 German Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C41C4B1D99EE26002A10E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C41C4D1D99EE26002A10E4 /* WordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListVC.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 		E0C41C4A1D99EE26002A10E4 /* 100 German Words */ = {
 			isa = PBXGroup;
 			children = (
+				E01EB76C1D9B0E5800732C40 /* Word+CoreDataClass.swift */,
+				E01EB76D1D9B0E5800732C40 /* Word+CoreDataProperties.swift */,
 				E0C41C4B1D99EE26002A10E4 /* AppDelegate.swift */,
 				E0C41C4D1D99EE26002A10E4 /* WordListVC.swift */,
 				E0C41C4F1D99EE26002A10E4 /* Main.storyboard */,
@@ -152,9 +158,11 @@
 				E0C41C541D99EE26002A10E4 /* _00_German_Words.xcdatamodeld in Sources */,
 				E0C41C651D9A0F9C002A10E4 /* WordModel.swift in Sources */,
 				E0C41C631D9A0F74002A10E4 /* ShowWordDetail.swift in Sources */,
+				E01EB76E1D9B0E5800732C40 /* Word+CoreDataClass.swift in Sources */,
 				E0C41C611D99F7C4002A10E4 /* WordCell.swift in Sources */,
 				E0C41C4E1D99EE26002A10E4 /* WordListVC.swift in Sources */,
 				E0C41C4C1D99EE26002A10E4 /* AppDelegate.swift in Sources */,
+				E01EB76F1D9B0E5800732C40 /* Word+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

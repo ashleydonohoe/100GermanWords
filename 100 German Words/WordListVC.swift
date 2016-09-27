@@ -11,8 +11,8 @@ import UIKit
 class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var words = [
-    Word(germanWord: "das Haus", englishWord: "the house", germanExample: "Das Haus ist grün.", englishExample: "The house is green.", learned: false, starred: true),
-        Word(germanWord: "die Tür", englishWord: "the door", germanExample: "Die Tür ist zu.", englishExample: "The door is closed.", learned: true, starred: false)
+    WordM(germanWord: "das Haus", englishWord: "the house", germanExample: "Das Haus ist grün.", englishExample: "The house is green.", learned: false, starred: true),
+        WordM(germanWord: "die Tür", englishWord: "the door", germanExample: "Die Tür ist zu.", englishExample: "The door is closed.", learned: true, starred: false)
         ]
     
     @IBOutlet weak var tableView: UITableView!
@@ -53,7 +53,7 @@ class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowWordDetail" {
             if let controller = segue.destination as? ShowWordDetail {
-                controller.word = sender as! Word?
+                controller.word = sender as! WordM?
             }
         }
     }
