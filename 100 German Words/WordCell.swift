@@ -23,4 +23,7 @@ class WordCell: UITableViewCell {
         }
     }
 
+    @IBAction func updateStarred(_ sender: AnyObject) {
+        print("starred")
+    }
 }

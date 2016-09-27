@@ -10,6 +10,7 @@ import UIKit
 
 class ShowWordDetail: UIViewController {
     
+    @IBOutlet weak var starredIcon: UIButton!
     @IBOutlet weak var learnedStatus: UIButton!
     @IBOutlet weak var englishSentence: UILabel!
     @IBOutlet weak var germanSentence: UILabel!
@@ -31,11 +32,28 @@ class ShowWordDetail: UIViewController {
             } else {
                 learnedStatus.setTitle("Mark As Learned", for: .normal)
             }
+            
+            if word.starred == true {
+                starredIcon.setBackgroundImage(UIImage(named: "starfilled"), for: .normal)
+            } else {
+                starredIcon.setBackgroundImage(UIImage(named: "starnofill"), for: .normal)
+            }
         }
     }
 
     @IBAction func goBack(_ sender: AnyObject) {
        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func updateStarredStatus(_ sender: AnyObject) {
+        let currentStatus = word.starred!
+        word.starred = !currentStatus
+        if word.starred == true {
+            starredIcon.setBackgroundImage(UIImage(named: "starfilled"), for: .normal)
+        } else {
+            starredIcon.setBackgroundImage(UIImage(named: "starnofill"), for: .normal)
+        }
+        
     }
     
     @IBAction func markLearnedStatus(_ sender: UIButton) {
