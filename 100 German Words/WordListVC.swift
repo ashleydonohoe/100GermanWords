@@ -15,11 +15,11 @@ class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     
     var controller: NSFetchedResultsController<Word>!
     
-    var words = [
-    WordM(germanWord: "das Haus", englishWord: "the house", germanExample: "Das Haus ist grün.", englishExample: "The house is green.", learned: false, starred: true),
-        WordM(germanWord: "die Tür", englishWord: "the door", germanExample: "Die Tür ist zu.", englishExample: "The door is closed.", learned: true, starred: false)
-        ]
-    
+//    var words = [
+//    WordM(germanWord: "das Haus", englishWord: "the house", germanExample: "Das Haus ist grün.", englishExample: "The house is green.", learned: false, starred: true),
+//        WordM(germanWord: "die Tür", englishWord: "the door", germanExample: "Die Tür ist zu.", englishExample: "The door is closed.", learned: true, starred: false)
+//        ]
+//    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -27,6 +27,9 @@ class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
 
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // Generate testData
+        generateTestData()
         
         // Get the wordslist; will be updated later for AppDelegate to load SQlite DB on first run
         getWordList()
@@ -118,6 +121,27 @@ class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
             let error = error as NSError
             print(error.localizedDescription)
         }
+    }
+    
+    func generateTestData() {
+        let word1 = Word(context: context)
+        word1.germanWord = "das Haus"
+        word1.englishWord = "the house"
+        word1.germanExample = "Das Haus ist grün."
+        word1.englishExample = "The house is green."
+        word1.learned = false
+        word1.starred = true
+        
+        let word2 = Word(context: context)
+        word2.germanWord = "die Tür"
+        word2.englishWord = "the door"
+        word2.germanWord = "Die Tür ist zu."
+        word2.englishExample = "The door is closed."
+        word2.learned = true
+        word2.starred = false
+        
+        ad.saveContext()
+        
     }
 
 }
