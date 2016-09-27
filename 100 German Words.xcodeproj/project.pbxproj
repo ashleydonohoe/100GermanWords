@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E0C41C4C1D99EE26002A10E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C41C4B1D99EE26002A10E4 /* AppDelegate.swift */; };
-		E0C41C4E1D99EE26002A10E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C41C4D1D99EE26002A10E4 /* ViewController.swift */; };
+		E0C41C4E1D99EE26002A10E4 /* WordListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C41C4D1D99EE26002A10E4 /* WordListVC.swift */; };
 		E0C41C511D99EE26002A10E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C41C4F1D99EE26002A10E4 /* Main.storyboard */; };
 		E0C41C541D99EE26002A10E4 /* _00_German_Words.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E0C41C521D99EE26002A10E4 /* _00_German_Words.xcdatamodeld */; };
 		E0C41C561D99EE26002A10E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C41C551D99EE26002A10E4 /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		E0C41C481D99EE26002A10E4 /* 100 German Words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "100 German Words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C41C4B1D99EE26002A10E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0C41C4D1D99EE26002A10E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E0C41C4D1D99EE26002A10E4 /* WordListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListVC.swift; sourceTree = "<group>"; };
 		E0C41C501D99EE26002A10E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0C41C531D99EE26002A10E4 /* _00_German_Words.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _00_German_Words.xcdatamodel; sourceTree = "<group>"; };
 		E0C41C551D99EE26002A10E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				E0C41C4B1D99EE26002A10E4 /* AppDelegate.swift */,
-				E0C41C4D1D99EE26002A10E4 /* ViewController.swift */,
+				E0C41C4D1D99EE26002A10E4 /* WordListVC.swift */,
 				E0C41C4F1D99EE26002A10E4 /* Main.storyboard */,
 				E0C41C551D99EE26002A10E4 /* Assets.xcassets */,
 				E0C41C571D99EE26002A10E4 /* LaunchScreen.storyboard */,
@@ -145,7 +145,7 @@
 			files = (
 				E0C41C541D99EE26002A10E4 /* _00_German_Words.xcdatamodeld in Sources */,
 				E0C41C611D99F7C4002A10E4 /* WordCell.swift in Sources */,
-				E0C41C4E1D99EE26002A10E4 /* ViewController.swift in Sources */,
+				E0C41C4E1D99EE26002A10E4 /* WordListVC.swift in Sources */,
 				E0C41C4C1D99EE26002A10E4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

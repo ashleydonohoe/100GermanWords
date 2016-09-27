@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WordListVC.swift
 //  100 German Words
 //
 //  Created by Ashley Donohoe on 9/26/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
