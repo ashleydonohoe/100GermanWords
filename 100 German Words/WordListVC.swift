@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -73,14 +73,51 @@ class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowWordDetail" {
             if let controller = segue.destination as? ShowWordDetail {
-                controller.word = sender as! WordM?
+                if let word = sender as? Word {
+                    controller.word = word
+                }
             }
         }
     }
     
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    @IBAction func segmentChanged(_ sender: AnyObject) {
+        getWordList()
+        tableView.reloadData()
+    }
+    
     // Fetches word list from core data
     func getWordList() {
+        let fetchRequest: NSFetchRequest<Word> = Word.fetchRequest()
+        let showAll = NSSortDescriptor(key: "germanWord", ascending: true)
         
+        
+        if segmentedControl.selectedSegmentIndex == 0 {
+            fetchRequest.sortDescriptors = [showAll]
+        } else {
+            //TODO: Figure out how to filter based on the starred/learned values
+            fetchRequest.sortDescriptors = [showAll]
+        }
+        
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        controller.delegate = self
+        
+        self.controller = controller
+        
+        do {
+            try controller.performFetch()
+        } catch {
+            let error = error as NSError
+            print(error.localizedDescription)
+        }
     }
 
 }

@@ -16,7 +16,8 @@ class ShowWordDetail: UIViewController {
     @IBOutlet weak var germanSentence: UILabel!
     @IBOutlet weak var englishWord: UILabel!
     @IBOutlet weak var germanWord: UILabel!
-    var word: WordM!
+    
+    var word: Word!
 
     override func viewDidLoad() {
         super.viewDidLoad()
