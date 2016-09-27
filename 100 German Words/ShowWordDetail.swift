@@ -9,10 +9,15 @@
 import UIKit
 
 class ShowWordDetail: UIViewController {
+    
+    var word: Word?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if word != nil {
+            print(word)
+        }
         // Do any additional setup after loading the view.
     }
 

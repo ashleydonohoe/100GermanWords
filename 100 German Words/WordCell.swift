@@ -13,8 +13,14 @@ class WordCell: UITableViewCell {
     @IBOutlet weak var englishTextLabel: UILabel!
     @IBOutlet weak var germanTextLabel: UILabel!
     
-    func configureCell() {
-        
+    func configureCell(word: Word) {
+        englishTextLabel.text = word.englishWord
+        germanTextLabel.text = word.germanWord
+        if word.starred == true {
+            starredIcon.setBackgroundImage(UIImage(named: "starfilled"), for: .normal)
+        } else {
+            starredIcon.setBackgroundImage(UIImage(named: "starnofill"), for: .normal)
+        }
     }
 
 }
