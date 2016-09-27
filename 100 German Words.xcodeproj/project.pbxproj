@@ -14,6 +14,8 @@
 		E0C41C561D99EE26002A10E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0C41C551D99EE26002A10E4 /* Assets.xcassets */; };
 		E0C41C591D99EE26002A10E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0C41C571D99EE26002A10E4 /* LaunchScreen.storyboard */; };
 		E0C41C611D99F7C4002A10E4 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C41C601D99F7C4002A10E4 /* WordCell.swift */; };
+		E0C41C631D9A0F74002A10E4 /* ShowWordDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C41C621D9A0F74002A10E4 /* ShowWordDetail.swift */; };
+		E0C41C651D9A0F9C002A10E4 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C41C641D9A0F9C002A10E4 /* WordModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E0C41C581D99EE26002A10E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0C41C5A1D99EE26002A10E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0C41C601D99F7C4002A10E4 /* WordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
+		E0C41C621D9A0F74002A10E4 /* ShowWordDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowWordDetail.swift; sourceTree = "<group>"; };
+		E0C41C641D9A0F9C002A10E4 /* WordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				E0C41C5A1D99EE26002A10E4 /* Info.plist */,
 				E0C41C521D99EE26002A10E4 /* _00_German_Words.xcdatamodeld */,
 				E0C41C601D99F7C4002A10E4 /* WordCell.swift */,
+				E0C41C621D9A0F74002A10E4 /* ShowWordDetail.swift */,
+				E0C41C641D9A0F9C002A10E4 /* WordModel.swift */,
 			);
 			path = "100 German Words";
 			sourceTree = "<group>";
@@ -144,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0C41C541D99EE26002A10E4 /* _00_German_Words.xcdatamodeld in Sources */,
+				E0C41C651D9A0F9C002A10E4 /* WordModel.swift in Sources */,
+				E0C41C631D9A0F74002A10E4 /* ShowWordDetail.swift in Sources */,
 				E0C41C611D99F7C4002A10E4 /* WordCell.swift in Sources */,
 				E0C41C4E1D99EE26002A10E4 /* WordListVC.swift in Sources */,
 				E0C41C4C1D99EE26002A10E4 /* AppDelegate.swift in Sources */,

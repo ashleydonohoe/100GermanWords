@@ -12,11 +12,6 @@ class WordCell: UITableViewCell {
     @IBOutlet weak var starredIcon: UIButton!
     @IBOutlet weak var englishTextLabel: UILabel!
     @IBOutlet weak var germanTextLabel: UILabel!
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
     func configureCell() {
         
