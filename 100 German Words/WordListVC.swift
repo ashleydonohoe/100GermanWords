@@ -11,6 +11,8 @@ import CoreData
 
 class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     
+    //TODO: Make CSV file of words and convert them to CD objects
+    
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var controller: NSFetchedResultsController<Word>!
