@@ -24,29 +24,39 @@ class ShowWordDetail: UIViewController {
         loadWordDetails()
     }
 
+
     @IBAction func goBack(_ sender: AnyObject) {
        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func updateStarredStatus(_ sender: AnyObject) {
+        let currentWord: Word = word!
         let currentStatus = word.starred
-        word.starred = !currentStatus
-        if word.starred == true {
+        currentWord.starred = !currentStatus
+        if currentWord.starred == true {
             starredIcon.setBackgroundImage(UIImage(named: "starfilled"), for: .normal)
         } else {
             starredIcon.setBackgroundImage(UIImage(named: "starnofill"), for: .normal)
         }
         
+        ad.saveContext()
+        
     }
     
     @IBAction func markLearnedStatus(_ sender: UIButton) {
+        
+        let currentWord: Word = word!
         let currentStatus = word.learned
-        word.learned = !currentStatus
-        if word.learned == true {
+        print("Current status: \(currentStatus)")
+        currentWord.learned = !currentStatus
+        if currentWord.learned == true {
             learnedStatus.setTitle("Mark As Unlearned", for: .normal)
         } else {
             learnedStatus.setTitle("Mark As Learned", for: .normal)
         }
+        
+        print("Changed Status: \(currentWord.learned)")
+        ad.saveContext()
         
     }
     

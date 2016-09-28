@@ -15,11 +15,6 @@ class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     
     var controller: NSFetchedResultsController<Word>!
     
-//    var words = [
-//    WordM(germanWord: "das Haus", englishWord: "the house", germanExample: "Das Haus ist grün.", englishExample: "The house is green.", learned: false, starred: true),
-//        WordM(germanWord: "die Tür", englishWord: "the door", germanExample: "Die Tür ist zu.", englishExample: "The door is closed.", learned: true, starred: false)
-//        ]
-//    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -33,6 +28,12 @@ class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         
         // Get the wordslist; will be updated later for AppDelegate to load SQlite DB on first run
         getWordList()
+        tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getWordList()
+        tableView.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
