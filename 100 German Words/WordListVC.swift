@@ -27,7 +27,7 @@ class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         
         // Generate testData
 //        generateTestData()
-        
+//        
         // Get the wordslist; will be updated later for AppDelegate to load SQlite DB on first run
         getWordList()
         tableView.reloadData()
@@ -142,10 +142,18 @@ class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         let word2 = Word(context: context)
         word2.germanWord = "die Tür"
         word2.englishWord = "the door"
-        word2.germanWord = "Die Tür ist zu."
+        word2.germanExample = "Die Tür ist zu."
         word2.englishExample = "The door is closed."
         word2.learned = true
         word2.starred = false
+        
+        let word3 = Word(context: context)
+        word3.germanWord = "die Liebe"
+        word3.englishWord = "the love"
+        word3.germanExample = "Die Liebe ist überall."
+        word3.englishExample = "Love is everywhere."
+        word3.learned = false
+        word3.starred = false
         
         ad.saveContext()
         
