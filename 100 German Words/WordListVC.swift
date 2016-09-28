@@ -103,13 +103,17 @@ class WordListVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     func getWordList() {
         let fetchRequest: NSFetchRequest<Word> = Word.fetchRequest()
         let showAll = NSSortDescriptor(key: "germanWord", ascending: true)
+        fetchRequest.sortDescriptors = [showAll]
         
         
-        if segmentedControl.selectedSegmentIndex == 0 {
-            fetchRequest.sortDescriptors = [showAll]
-        } else {
+        if segmentedControl.selectedSegmentIndex == 1 {
             //TODO: Figure out how to filter based on the starred/learned values
             fetchRequest.sortDescriptors = [showAll]
+            fetchRequest.predicate = NSPredicate(format: "learned == %@", true as CVarArg)
+        } else if segmentedControl.selectedSegmentIndex == 2 {
+            fetchRequest.predicate = NSPredicate(format: "learned == %@", false as CVarArg)
+        } else if segmentedControl.selectedSegmentIndex == 3 {
+              fetchRequest.predicate = NSPredicate(format: "starred == %@", true as CVarArg)
         }
         
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
